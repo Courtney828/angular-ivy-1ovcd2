@@ -1,1 +1,27 @@
-<p>lol</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    
+      
+    <div class="container">
+      <a mat-raised-button routerLink="/home/add-products" style="margin-bottom: 50px">Add products</a>
+      <h2 >products</h2> 
+      <mat-grid-list cols="3" >
+        <mat-grid-tile *ngFor="let product of product">
+          <div class="card" style="width: 18rem;">
+            <img src={{product.productImage}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4>{{product.productName}}</h4>
+              <h3>{{product.productDescription}}</h3>
+              <span>{{product.productPrice}}</span>
+
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </body>
+</html>
