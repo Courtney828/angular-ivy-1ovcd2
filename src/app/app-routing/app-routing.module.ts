@@ -11,11 +11,12 @@ const appRouting: Routes = [
   { path: "", component: HomeComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
-  { path: "add-products", component: AddProductsComponent }
+  { path: "home/add-products", component: AddProductsComponent }
 ];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(appRouting)],
-  declarations: []
+  declarations: [],
+  exports:[ RouterModule ]
 })
 export class AppRoutingModule {}
